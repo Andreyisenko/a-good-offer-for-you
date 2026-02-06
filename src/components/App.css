@@ -55,8 +55,7 @@
 }
 
 .btn:hover,
-.btn:focus,
-.btn:active {
+.btn:focus {
   cursor: pointer;
   color: rgb(78, 245, 92);
   background-color: blueviolet;
