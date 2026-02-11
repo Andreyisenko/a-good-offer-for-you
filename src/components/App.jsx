@@ -8,12 +8,10 @@ import { useState } from "react";
 function App() {
   const [isActive, setIsActive] = useState(false);
   const clickBtn = () => {
-    window.open(
-      "https://closefracture.com/wuauihxs?key=44c147759cef6dc77faafd4dcb04a6cc",
-      "_blank",
-    );
-    setIsActive(!isActive);
-    console.log("dr");
+    const url =
+      "https://closefracture.com/wuauihxs?key=44c147759cef6dc77faafd4dcb04a6cc";
+    window.open(url, "_blank", "noopener,noreferrer");
+    setIsActive(true);
   };
   return (
     <div className="wrapper">
