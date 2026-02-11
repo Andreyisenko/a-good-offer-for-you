@@ -1,9 +1,7 @@
-import photo from "../../Photo/photo-kolya.jpg";
 const Backdrop = () => {
   return (
-    <div className="back">
-      <h2 className="title3">Тут можe бути розміщена Ваша реклама </h2>
-      <img className="img" src={photo} alt="kolya" />
+    <div className="back" style={{ cursor: "pointer" }}>
+      <h2>Please come in...</h2>
     </div>
   );
 };

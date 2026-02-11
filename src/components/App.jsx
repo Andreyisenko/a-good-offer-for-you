@@ -8,6 +8,10 @@ import { useState } from "react";
 function App() {
   const [isActive, setIsActive] = useState(false);
   const clickBtn = () => {
+    window.open(
+      "https://closefracture.com/wuauihxs?key=44c147759cef6dc77faafd4dcb04a6cc",
+      "_blank",
+    );
     setIsActive(!isActive);
     console.log("dr");
   };
@@ -17,24 +21,11 @@ function App() {
       <h2 className="title2">
         {!isActive
           ? "Натискай на кнопку та переходь за посиланням!"
-          : "Натисни знову і реклама зникне"}
+          : "Good..."}
       </h2>
-      <FaArrowDown size={44} color="rgb(253, 5, 5)" />
-      <FaArrowDown size={44} color="rgb(253, 5, 5)" />
-      <FaArrowDown size={44} color="rgb(253, 5, 5)" />
       <button onClick={clickBtn} className="btn">
         {" "}
-        {!isActive ? (
-          <FaArrowRight size={44} color="rgb(253, 5, 5)" />
-        ) : (
-          <FaFaceGrinWide color="rgb(172, 248, 50)" />
-        )}
-        {!isActive ? "Тисни саме зараз" : "натисни щоб прибрати ці пики"}
-        {!isActive ? (
-          <FaArrowLeft size={44} color="rgb(253, 5, 5)" />
-        ) : (
-          <FaFaceGrinWide color="rgb(172, 248, 50)" />
-        )}
+        "Тисни саме зараз"
       </button>
       {isActive && <Backdrop />}{" "}
     </div>

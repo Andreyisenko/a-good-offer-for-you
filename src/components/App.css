@@ -1,118 +1,123 @@
+/* Контейнер */
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
+  padding: 1rem;
 }
 
+/* Заголовки */
 .title {
-  font-size: 44px;
-  color: rgb(164, 200, 19);
+  font-size: 2.5rem;
+  color: #54f21f;
+  margin-bottom: 0.5rem;
 }
+
 .title2 {
-  font-size: 34px;
-  color: rgb(237, 36, 170);
-  margin: 20px;
+  font-size: 2rem;
+  color: #ec62be;
+  margin: 1rem 0;
 }
+
 .title3 {
-  font-size: 34px;
-  color: rgb(255, 32, 12);
-  margin: 20px;
+  font-size: 2rem;
+  color: #ff200c;
+  margin: 1rem 0;
 }
+
+/* Wrapper з градієнтним фоном */
 .wrapper {
-  background-color: rgb(191, 224, 224);
-  margin: 20px;
-  border-radius: 10px;
-  /* height: 400px; */
+  background: linear-gradient(135deg, #1c254e, #2575fc);
+  margin: 1rem;
+  border-radius: 15px;
   width: 100%;
-  border: 2px solid;
-  border-color: rgb(66, 6, 164);
-  box-shadow: 2px 1px 20px 20px rgb(159, 178, 159);
+  padding: 2rem;
+  border: 2px solid #4206a4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease;
 }
 
-.btn {
-  /* display: block;
-  font-size: 40px;
-  margin: 40px auto;
-  min-width: 200px;
-  height: 80px;
-  color: antiquewhite;
-  background-color: rgb(16, 131, 29);
-  border-radius: 8px;
-  transition: transform 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  box-shadow: 10px 10px 20px rgb(177, 150, 150); */
+.wrapper:hover {
+  transform: translateY(-5px);
+}
 
-  display: inline-block; /* block або inline-block — обидва працюють */
-  font-size: 2rem; /* адаптивний розмір */
-  margin: 40px auto;
-  padding: 1rem 2rem; /* замість height і width */
-  color: antiquewhite;
-  background-color: rgb(16, 131, 29);
-  border-radius: 8px;
-  transition: transform 350ms ease; /* можна швидше */
-  box-shadow: 10px 10px 20px rgb(177, 150, 150);
-  /* white-space: nowrap; */
+/* Кнопка 3D */
+.btn {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: linear-gradient(145deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .btn:hover,
 .btn:focus {
   cursor: pointer;
-  color: rgb(78, 245, 92);
-  background-color: blueviolet;
-  transform: scale(1.2);
-  /* transform: translateY(-2px) scale(1.05); */
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Повернення кнопки при натисканні */
+.btn:active {
+  transform: translateY(1px) scale(1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Фон блоку */
 .back {
-  /* width: 100%;
-  height: 100%;
-  background-color: aquamarine; */
-  position: relative; /* щоб h2 позиціювати відносно контейнера */
+  position: relative;
   width: 100%;
-  height: 400px; /* або будь-яка висота під твій дизайн */
+  height: 400px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
-.img {
-  object-fit: cover;
-  width: 100%;
-  height: 100vh;
-}
-.back h2 {
-  /* position: absolute; */
-  /* top: 80%;
-  left: 50%; */
-  transform: translate(-50%, -50%);
-  color: rgb(63, 254, 20);
-  font-size: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.back {
-  position: relative; /* щоб h2 позиціювати відносно контейнера */
-  width: 100%;
-  height: 400px; /* або будь-яка висота під твій дизайн */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
+/* Зображення у фоні */
 .back img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* фото не спотворюється і заповнює блок */
+  object-fit: cover;
 }
 
+/* Текст поверх зображення */
 .back h2 {
   position: absolute;
-  bottom: 0; /* внизу блоку */
-  left: 50%; /* по центру горизонтально */
-  transform: translateX(-50%); /* центрування по осі X */
-  color: #fff; /* текст на фоні фото */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* щоб читалось на фото */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   margin: 0;
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
-  background: rgba(0, 0, 0, 0.3); /* напівпрозорий фон під текстом */
-  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Мобільна оптимізація */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .title2,
+  .title3 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+  .back h2 {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
